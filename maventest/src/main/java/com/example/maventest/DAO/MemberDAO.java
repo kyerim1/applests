@@ -16,6 +16,20 @@ public class MemberDAO {
 		this.jdbcTemplate=jdbcTemplate;
 	}
 	
+
+	
+	
+	//로그인 - 이메일 비번 확인
+	public String findMemberByemailpw(String email, String pw) {
+		String sql = "select name from member where email=? and pw=?";
+		try {
+			return jdbcTemplate.queryForObject(sql, String.class ,email, pw);
+		}catch(Exception e) {
+			return null;
+		}
+	}
+	
+	
 	//회원가입 데이터베이스에 저장
 	public void insert(memberDTO memberdto) {
 		String sql="insert into member(email, pw, name, tel) "

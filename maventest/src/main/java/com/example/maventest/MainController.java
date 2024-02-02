@@ -1,5 +1,9 @@
 package com.example.maventest;
 
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,6 +17,7 @@ import com.example.maventest.service.MemberService;
 @Controller
 public class MainController {
 	private final MemberService memberService;
+	
 	
 	public MainController(MemberService memberService) {
 		this.memberService=memberService;
@@ -36,6 +41,25 @@ public class MainController {
 		return mv;
 	}
 	
+	@PostMapping("/signin")
+	public ModelAndView signin( @RequestParam Map<String, String> param , 
+			       HttpSession session  ) {
+		
+		ModelAndView mv = new ModelAndView("index");
+		
+		System.out.println( param.get("email") );
+		String name = memberService.login( param);
+		//mv.addObject("user", name);
+		if( name !=null)
+			session.setAttribute("user", name);
+		else {
+			mv.setViewName("signin");
+			mv.addObject("fail", "a");
+		}
+		return mv;
+	}
+	
+	
 	@PostMapping("/signup/Enroll")
 	public ModelAndView signEnroll( @ModelAttribute memberDTO memberdto   ) {
 		
@@ -44,6 +68,13 @@ public class MainController {
 		memberService.insert(memberdto);
 		return mv;
 	}
+	
+	@GetMapping("/update")
+	public ModelAndView update() {
+		ModelAndView mv = new ModelAndView("update");
+		return mv;
+	}
+	
 	
 	
 //	public ModelAndView signEnroll(
