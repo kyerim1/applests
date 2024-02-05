@@ -74,7 +74,12 @@ public class MainController {
 		ModelAndView mv = new ModelAndView("update");
 		return mv;
 	}
-	
+	@PostMapping("/update")
+	public ModelAndView update(@RequestParam Map<String, String> pm) {
+		ModelAndView mv = new ModelAndView("signin");
+		memberService.update(pm);
+		return mv;
+	}
 	
 	
 //	public ModelAndView signEnroll(

@@ -31,6 +31,10 @@ public class MemberService {
 	}
 	
 	
+	public void update(Map<String,String> p) {
+		memberdao.update(p.get("email"),p.get("pin"),p.get("name"),
+				p.get("tel"),p.get("repin"));
+	}
 	
 }
 
