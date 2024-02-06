@@ -59,7 +59,7 @@ public class MainController {
 		return mv;
 	}
 	
-	
+	//form 입력 데이터 가져오는 방법 2
 	@PostMapping("/signup/Enroll")
 	public ModelAndView signEnroll( @ModelAttribute memberDTO memberdto   ) {
 		
@@ -81,7 +81,7 @@ public class MainController {
 		return mv;
 	}
 	
-	
+// 	 form 입력 데이터 가져오는 방법 1 (RequestParam으로 받아오기)
 //	public ModelAndView signEnroll(
 //			@RequestParam("email") String email, 
 //			@RequestParam("pin") String pw, 

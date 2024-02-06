@@ -7,7 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<h2> input3.jsp  </h2>
-		${person.myId } <br> ${person.myName }
+	<h2> input4.jsp </h2>
+
+	${id }  <br>  ${name }	
+	
+	
 </body>
 </html>
+
+
+
+
+
+
+
+

@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<h2> input3.jsp  </h2>
-		${person.myId } <br> ${person.myName }
+	
+	<div> 작성자 : ${contentDto.writer }</div>
+	<div> 내용 : ${contentDto.content }</div>
 </body>
 </html>

@@ -8,14 +8,16 @@
 </head>
 <body>
 
-	<form method="get" action="/input2">
-	아이디 : <input type="text" name="myId" >  <br>
-	이름 : <input type="text" name="myName"> <br>
-	<button>작성</button>
-	
+	<form method="get" action="/input3">
+		아이디 : <input type="text" name="myId" >  <br>
+		이름 : <input type="text" name="myName"> <br>
+		<button type="button" id="send">작성</button>
 	</form>
-
-
+	
+	<a href="/input4/sky/강하늘">강하늘</a>
+	<a href="/input4/ha/하지원">하지원</a>
+	
+	
 </body>
 </html>
 
