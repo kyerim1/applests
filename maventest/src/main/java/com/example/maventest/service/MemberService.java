@@ -9,7 +9,7 @@ import com.example.maventest.DAO.MemberDAO;
 import com.example.maventest.DTO.memberDTO;
 
 @Service
-public class MemberService {
+public class MemberService implements aa{
 	private final MemberDAO memberdao ;
 	
 	@Autowired
@@ -20,6 +20,7 @@ public class MemberService {
 	
 	//회원가입 저장 메서드
 	public void insert(memberDTO memberdto) {
+		memberDTO memberdto =new memberDTO();
 		memberdao.insert(memberdto);
 	}
 	
