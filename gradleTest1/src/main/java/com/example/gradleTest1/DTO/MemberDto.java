@@ -11,18 +11,24 @@ import lombok.Data;
 
 @Data
 public class MemberDto {
-	
+	@Email
 	private String email;
 	
 	@NotBlank(message="name is not input")
 	private String name;
 	
+	@NotBlank(message="비밀번호를 입력하세요")
+	@Size(min=6, message="비밀번호는 6자리 이상입니다.")
 	private String password;
 	
+	@NotBlank(message="도시를 입력하세요")
 	private String city;
 	
+	@NotBlank(message="주소를 입력하세요")
 	private String state;
 	
+	@NotBlank(message="우편번호를 입력하세요")
+	@Digits(integer=5, fraction=0, message="우편번호는5자리 숫자입니다.")
 	private String zipCode;
 }
 
