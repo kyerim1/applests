@@ -15,9 +15,9 @@ public class config {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/javaTest");
-        dataSource.setUsername("javaTest");
-        dataSource.setPassword("123456");
+        dataSource.setUrl("jdbc:mysql://krdrive.ipdisk.co.kr:3306/apple");
+        dataSource.setUsername("apple");
+        dataSource.setPassword("123123");
         return dataSource;
     }
 	 @Bean

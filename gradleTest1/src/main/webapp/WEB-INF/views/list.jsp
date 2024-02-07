@@ -26,8 +26,8 @@
 					<tr>
 						<td>${row.id }</td>
 						<td>${row.writer }</td>
-						<td>${row.title }</td>
-						<td>${row.content }</td>
+						<td><a href="/view/${row.id }">${row.title }</a></td>
+						<td> <a href="/delete/${row.id }">X</a></td>
 					</tr>
 				</c:forEach>
 			</c:otherwise>
