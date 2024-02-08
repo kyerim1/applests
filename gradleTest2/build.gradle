@@ -34,6 +34,8 @@ dependencies {
 	implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper'
 	implementation group: 'javax.servlet', name: 'jstl'
 	implementation group: 'org.springframework', name: 'spring-jdbc'
+	implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '2.1.3'
+	ProvideRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }
 
 tasks.named('bootBuildImage') {
